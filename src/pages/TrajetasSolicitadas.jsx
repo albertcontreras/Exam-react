@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import {Container,Card,CardContent,Stack,Typography,TableContainer,Table,TableRow,TableCell,
-        TableHead,Paper,TableBody,IconButton,Popover, MenuItem,} from '@mui/material'
+        TableHead,Paper,TableBody,IconButton,Popover, MenuItem, } from '@mui/material'
 import { useDataStore } from "../Store"
 import Iconify from "../components/Iconify"
 import { useSnackbar } from 'notistack'
+
+
 
 
 const TarjetaSolicitada = () => {
@@ -51,15 +53,17 @@ const TarjetaSolicitada = () => {
   }
 
   return (
-    <Container>
+   
+    <Container maxWidth="md">
        <Stack
         direction='row'
         alignItems='center'
         spacing={2}
-        justifyContent='center'
-        mb={3}
+        justifyContent='start'
+        mb={5}
+        mt={3}
       >
-      <Typography variant='h4' gutterBottom>
+      <Typography variant='h5'>
          Tarjetas Solicitadas
       </Typography> 
       </Stack>
@@ -92,12 +96,12 @@ const TarjetaSolicitada = () => {
                     <TableCell align='right'>{row.correo}</TableCell>
                     <TableCell align='right'>{row.telefono}</TableCell>
                     <TableCell align='right'>
-						<IconButton
+            <IconButton
 							size='large'
-							color='inherit'
+							color='string'
 							onClick={(e) => handleOpenMenu(e, index)}
-						>
-												
+						>				
+            <Iconify icon={'eva:more-vertical-fill'} />
 						</IconButton>
 					</TableCell>
                   </TableRow>
@@ -129,6 +133,7 @@ const TarjetaSolicitada = () => {
         </CardContent>
       </Card>
     </Container>
+   
   )
 }
 

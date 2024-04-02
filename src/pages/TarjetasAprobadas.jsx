@@ -23,15 +23,16 @@ import {Container,Stack,Card,CardContent,Typography} from '@mui/material'
     }
   
     return (
-      <Container>
+      <Container maxWidth="md">
         <Stack
+          mt={3}
           direction='row'
           alignItems='center'
           spacing={2}
-          justifyContent='center'
+          justifyContent='start'
           mb={3}
         >
-          <Typography variant='h4' gutterBottom>
+          <Typography variant='h5' gutterBottom>
             Solicitud de Tarjeta de Crédito
           </Typography>
         </Stack>
